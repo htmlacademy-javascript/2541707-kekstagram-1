@@ -8,7 +8,7 @@ const checkPalindrome = (string) =>
 
 /**
  * Функция извлечения целого числа из цифр в строке
- * @param {string} string - изначальная строка для извлечения
+ * @param {string} string - изначальная  строка для извлечения
  * @return {number} - целое число
  */
 const extractNumber = (string) =>
@@ -25,6 +25,24 @@ const creatingAddres = (string, lengthstr, symbol) =>
   string.length > lengthstr ? string : string.padStart(lengthstr, symbol);
 
 /**
+ * Функция формирования адресов файлов
+ * @param {string} string - исходная строка
+ * @param {number} lengthstr - длинна строки
+ * @param {string} symbol - исходная строка
+ * @return {string} - адрес файла
+ */
+const creatingAddres = (string, lengthstr, symbol) => {
+  if (string.length > lengthstr) {
+    return string;
+  }
+  const stringCount = lengthstr - string.length;
+  for (let i = 0; i < stringCount; i++) {
+    string = symbol + string;
+  }
+  return string;
+}
+
+/**
  * Функция проверки длинны строки
  * @param {string} string - изначальная строка для проверки
  * @param {number} lengthstr - длинна строки
@@ -32,3 +50,4 @@ const creatingAddres = (string, lengthstr, symbol) =>
  */
 const checkLengthStr = (string, lengthstr) =>
   string.length <= lengthstr;
+
