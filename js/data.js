@@ -10,6 +10,10 @@ const commentTexts = [
 
 const commentatorNames = ['Чел1', 'Чел2', 'Чел3', 'Чел4', 'Чел5', 'Чел6', 'Чел7'];
 
+/**
+ * Генерирует комментарий
+ * @returns {Object} - данные комментария
+ */
 const generateComment = () => ({
     id: getRandomNumber(1, 1000),
     avatar: `img/avatar-${getRandomNumber(1, 6)}.svg`,
@@ -17,11 +21,16 @@ const generateComment = () => ({
     name: getRandomElement(commentatorNames)
 });
 
+/**
+ * Генерирует массив комментариев
+ * @param {number} count - количество комментариев
+ * @returns {Object[]} - массив комментариев
+ */
 const generateComments = (count) => Array.from({ length: count }, generateComment);
 
 /**
  * Гененрирует объект фотографию
- * @param {int} id - уникальный идентификатор
+ * @param {number} id - уникальный идентификатор
  * @returns {Object} - данные фотографии
  */
 const generatePhotoDescription = (id) => ({
