@@ -19,6 +19,11 @@ const generateComment = () => ({
 
 const generateComments = (count) => Array.from({ length: count }, generateComment);
 
+/**
+ * Гененрирует объект фотографию
+ * @param {int} id - уникальный идентификатор
+ * @returns {Object} - данные фотографии
+ */
 const generatePhotoDescription = (id) => ({
     id,
     url: `photos/${id}.jpg`,
