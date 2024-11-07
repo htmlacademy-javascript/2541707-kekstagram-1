@@ -9,7 +9,7 @@ const renderPictures = (photosData) => {
     pictureElement.querySelector('.picture__likes').textContent = photo.likes;
     pictureElement.querySelector('.picture__comments').textContent = photo.comments.length;
     fragment.appendChild(pictureElement);
-  }
+  };
   photosData.forEach(cb);
 
   document.querySelector('.pictures').appendChild(fragment);
