@@ -15,10 +15,10 @@ const commentatorNames = ['Чел1', 'Чел2', 'Чел3', 'Чел4', 'Чел5',
  * @returns {Object} - данные комментария
  */
 const generateComment = () => ({
-    id: getRandomNumber(1, 1000),
-    avatar: `img/avatar-${getRandomNumber(1, 6)}.svg`,
-    message: getRandomElement(commentTexts),
-    name: getRandomElement(commentatorNames)
+  id: getRandomNumber(1, 1000),
+  avatar: `img/avatar-${getRandomNumber(1, 6)}.svg`,
+  message: getRandomElement(commentTexts),
+  name: getRandomElement(commentatorNames)
 });
 
 /**
@@ -34,11 +34,11 @@ const generateComments = (count) => Array.from({ length: count }, generateCommen
  * @returns {Object} - данные фотографии
  */
 const generatePhotoDescription = (id) => ({
-    id,
-    url: `photos/${id}.jpg`,
-    description: `Описание фотографии ${id}`,
-    likes: getRandomNumber(15, 200),
-    comments: generateComments(getRandomNumber(1, 5))
+  id,
+  url: `photos/${id}.jpg`,
+  description: `Описание фотографии ${id}`,
+  likes: getRandomNumber(15, 200),
+  comments: generateComments(getRandomNumber(1, 5))
 });
 
 const createPhotoDescriptions = () => Array.from({ length: 25 }, (_, index) => generatePhotoDescription(index + 1));
