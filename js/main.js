@@ -1,3 +1,6 @@
+import { renderPictures } from './pictures.js';
 import { createPhotoDescriptions } from './data.js';
 
-console.log(createPhotoDescriptions());
+const photoDescriptions = createPhotoDescriptions();
+
+renderPictures(photoDescriptions);
