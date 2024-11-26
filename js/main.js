@@ -9,7 +9,7 @@ renderPictures(photoDescriptions);
 document.querySelectorAll('.picture').forEach((pictureElement) => {
   pictureElement.addEventListener('click', () => {
     const photoId = pictureElement.dataset.id;
-    const photo = photoDescriptions.find((photo) => photo.id === +photoId);
+    const photo = photoDescriptions.find((photo) => photo.id === parseInt(photoId));
     renderBigPicture(photo);
   });
 });
