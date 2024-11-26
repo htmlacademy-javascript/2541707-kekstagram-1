@@ -8,6 +8,7 @@ const renderPictures = (photosData) => {
     pictureElement.querySelector('.picture__img').src = photo.url;
     pictureElement.querySelector('.picture__likes').textContent = photo.likes;
     pictureElement.querySelector('.picture__comments').textContent = photo.comments.length;
+    pictureElement.dataset.id = photo.id;
     fragment.appendChild(pictureElement);
   };
   photosData.forEach(cb);
