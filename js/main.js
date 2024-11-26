@@ -8,8 +8,8 @@ renderPictures(photoDescriptions);
 
 document.querySelectorAll('.picture').forEach((pictureElement) => {
   pictureElement.addEventListener('click', () => {
-    const photoId = pictureElement.dataset.id;
-    const photo = photoDescriptions.find((photo) => photo.id === parseInt(photoId));
+    const photoId = parseInt(pictureElement.dataset.id);
+    const photo = photoDescriptions.find((photo) => photo.id === photoId);
     renderBigPicture(photo);
   });
 });
